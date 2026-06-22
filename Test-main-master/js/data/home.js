@@ -1,0 +1,100 @@
+export const DEAL_PRODUCTS = [
+  {
+    id: 101,
+    title: 'Smart watches',
+    price: 25,
+    discountPercentage: 25,
+    thumbnail: 'https://images.pexels.com/photos/6311612/pexels-photo-6311612.jpeg?auto=compress&cs=tinysrgb&w=240',
+  },
+  {
+    id: 102,
+    title: 'Smart watches',
+    price: 19,
+    discountPercentage: 15,
+    thumbnail: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=240',
+  },
+  {
+    id: 103,
+    title: 'Smart watches',
+    price: 89,
+    discountPercentage: 40,
+    thumbnail: 'https://images.pexels.com/photos/18105/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=240',
+  },
+  {
+    id: 104,
+    title: 'Headphones',
+    price: 19,
+    discountPercentage: 25,
+    thumbnail: 'https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=240',
+  },
+  {
+    id: 105,
+    title: 'Canon cameras',
+    price: 89,
+    discountPercentage: 25,
+    thumbnail: 'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=240',
+  },
+];
+
+export const FEATURED_PRODUCTS = [
+  {
+    id: 201,
+    title: 'T-shirts with multiple colors, for men',
+    price: 10.30,
+    thumbnail: 'https://images.pexels.com/photos/6311612/pexels-photo-6311612.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 202,
+    title: 'Brown winter jacket with soft lining',
+    price: 10.30,
+    thumbnail: 'https://images.pexels.com/photos/7679650/pexels-photo-7679650.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 203,
+    title: 'Blue wallet for travel and daily use',
+    price: 10.30,
+    thumbnail: 'https://images.pexels.com/photos/4452526/pexels-photo-4452526.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 204,
+    title: 'Decorative clay pot, brown ceramic',
+    price: 10.30,
+    thumbnail: 'https://images.pexels.com/photos/4207785/pexels-photo-4207785.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 205,
+    title: 'Blue denim backpack with soft handle',
+    price: 99,
+    thumbnail: 'https://images.pexels.com/photos/1546003/pexels-photo-1546003.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 206,
+    title: 'Casual blue jeans for men',
+    price: 9.99,
+    thumbnail: 'https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 207,
+    title: 'Headset for gaming with mic',
+    price: 8.99,
+    thumbnail: 'https://images.pexels.com/photos/3394651/pexels-photo-3394651.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 208,
+    title: 'Blue school backpack, modern style',
+    price: 10.30,
+    thumbnail: 'https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 209,
+    title: 'Decorative clay pot, brown ceramic',
+    price: 10.30,
+    thumbnail: 'https://images.pexels.com/photos/4207785/pexels-photo-4207785.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+  {
+    id: 210,
+    title: 'Electric kettle, black stainless steel',
+    price: 80.95,
+    thumbnail: 'https://images.pexels.com/photos/4226765/pexels-photo-4226765.jpeg?auto=compress&cs=tinysrgb&w=260',
+  },
+];
