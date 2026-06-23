@@ -161,12 +161,7 @@ export default function Home() {
               ? Array.from({ length: 10 }).map((_, i) => <div className="product-skeleton" key={i} />)
               : featured.map((product) => <HomeProductCard product={product} key={product.id} />)}
           </div>
-          <div className="error-state" id="errorState" hidden={errorVisible}>
-            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="1.5">
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="8" x2="12" y2="12" />
-              <line x1="12" y1="16" x2="12.01" y2="16" />
-            </svg>
+          <div className="error-state" id="errorState" hidden={!errorVisible}>
             <p>
               Failed to load products. <button className="retry-link" id="retryBtn" onClick={onRetry}>Try again</button>
             </p>
@@ -218,40 +213,40 @@ function HeroPanel() {
       <aside className="cat-sidebar" id="catSidebar" aria-label="Browse categories">
         <ul className="sidebar-cat-list" role="list">
           <li><Link to="/products.html?category=vehicle" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" /><path d="M16 8h4l3 3v5h-7V8z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="1" y="3" width="15" height="13" /><path d="M16 8h4l3 3v5h-7V8z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>
             Automobiles
           </Link></li>
           <li><Link to="/products.html?category=womens-dresses" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H5v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10h1.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H5v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V10h1.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z" /></svg>
             Clothes and wear
           </Link></li>
           <li><Link to="/products.html?category=furniture" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
             Home interiors
           </Link></li>
           <li><Link to="/products.html?category=laptops" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
             Computer and tech
           </Link></li>
           <li><Link to="#" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>
             Tools, equipments
           </Link></li>
           <li><Link to="#" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" /></svg>
             Sports and outdoor
           </Link></li>
           <li><Link to="#" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" /></svg>
             Animal and pets
           </Link></li>
           <li><Link to="#" className="sidebar-cat-link">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14M16.24 7.76a6 6 0 0 1 0 8.49" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3" /><path d="M19.07 4.93a10 10 0 0 1 0 14.14M16.24 7.76a6 6 0 0 1 0 8.49" /></svg>
             Machinery tools
           </Link></li>
           <li><Link to="/products.html" className="sidebar-cat-link more-cat">
             More category
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9" /></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="6 9 12 15 18 9" /></svg>
           </Link></li>
         </ul>
       </aside>
@@ -357,20 +352,40 @@ function DealsSection({ deals }: { deals: Product[] | null }) {
 function InquiryBanner() {
   return (
     <section className="inquiry-banner">
-      <div className="section-inner">
+      {/* Parallax background layer */}
+      <div className="inquiry-parallax-bg" aria-hidden="true" />
+      {/* Dark overlay */}
+      <div className="inquiry-overlay" aria-hidden="true" />
+
+      <div className="section-inner inquiry-content">
         <div className="inquiry-layout">
           <div className="inquiry-left">
+            <p className="inquiry-eyebrow">Global B2B Sourcing</p>
             <h2 className="inquiry-title">An easy way to send requests to all suppliers</h2>
             <p className="inquiry-desc">Send inquiry details once and get matched with qualified suppliers for your product needs.</p>
+            <ul className="inquiry-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Verified global suppliers
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Trade Assurance protection
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Free to send, fast response
+              </li>
+            </ul>
           </div>
-          <div className="inquiry-divider" />
+
           <div className="inquiry-right">
             <h3 className="inquiry-form-title">Send quote to suppliers</h3>
             <form className="inquiry-form" onSubmit={(e) => e.preventDefault()}>
-              <label className="inquiry-label">What item you need?</label>
-              <input type="text" className="inquiry-input" placeholder="Type more details" aria-label="Item description" />
+              <label className="inquiry-label">What item do you need?</label>
+              <input type="text" className="inquiry-input" placeholder="e.g. Wireless headphones, 500 pcs" aria-label="Item description" />
               <div className="inquiry-row">
-                <input type="number" className="inquiry-input inquiry-qty" placeholder="Quantity" aria-label="Quantity" />
+                <input type="number" className="inquiry-input inquiry-qty" placeholder="Quantity" aria-label="Quantity" min="1" />
                 <select className="inquiry-select" aria-label="Unit">
                   <option>Pcs</option>
                   <option>Kg</option>
@@ -378,7 +393,10 @@ function InquiryBanner() {
                   <option>Box</option>
                 </select>
               </div>
-              <button className="btn-send-inquiry">Send inquiry</button>
+              <button className="btn-send-inquiry">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send inquiry
+              </button>
             </form>
           </div>
         </div>

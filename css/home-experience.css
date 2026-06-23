@@ -464,62 +464,153 @@
 }
 
 .inquiry-banner {
+  position: relative;
   margin: 18px 0 8px;
-  padding: 56px 0;
+  padding: 80px 0;
+  overflow: hidden;
+  background: none;
+}
+
+/* Parallax background layer — background-attachment:fixed makes the image
+   scroll at a different rate than the page, creating the parallax effect. */
+.inquiry-parallax-bg {
+  position: absolute;
+  inset: -40px 0;
   background-image: url("https://images.pexels.com/photos/4483610/pexels-photo-4483610.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+  z-index: 0;
+}
+
+/* Gradient overlay on top of the parallax image */
+.inquiry-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(5, 18, 50, 0.88) 0%,
+    rgba(1, 60, 140, 0.82) 50%,
+    rgba(0, 100, 120, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+/* Content sits above both layers */
+.inquiry-content {
+  position: relative;
+  z-index: 2;
 }
 
 .inquiry-banner::before {
-  background:
-    linear-gradient(90deg, rgba(9, 25, 46, 0.92), rgba(13, 78, 138, 0.82) 56%, rgba(21, 169, 154, 0.72)),
-    linear-gradient(135deg, rgba(20, 87, 230, 0.22), rgba(245, 165, 36, 0.16));
+  content: none;
 }
 
 .inquiry-layout {
-  grid-template-columns: minmax(0, 1fr) 1px 420px;
-  gap: 34px;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 52px;
+  align-items: center;
+}
+
+.inquiry-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
 }
 
 .inquiry-title {
   max-width: 600px;
-  font-size: clamp(28px, 3vw, 46px);
-  font-weight: 900;
-  line-height: 1.08;
+  font-size: clamp(26px, 3vw, 42px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
 }
 
 .inquiry-desc {
-  max-width: 520px;
+  max-width: 480px;
   font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 24px;
+}
+
+.inquiry-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inquiry-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+}
+
+.inquiry-features li svg {
+  flex-shrink: 0;
+  color: #4ade80;
 }
 
 .inquiry-divider {
-  margin: 0;
-  height: 250px;
+  display: none;
 }
 
 .inquiry-right {
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(16px);
+  padding: 28px 24px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28);
+  border: none;
+  backdrop-filter: none;
 }
 
 .inquiry-form-title {
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 18px;
 }
 
 .inquiry-input,
 .inquiry-select {
   min-height: 44px;
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  background: var(--bg);
+  border-color: var(--border);
+  color: var(--text-dark);
+}
+
+.inquiry-input:focus {
+  background: #fff;
+}
+
+.inquiry-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-mid);
 }
 
 .btn-send-inquiry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   min-height: 44px;
-  padding: 0 20px;
+  padding: 0 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
 }
 
 #products .section-inner > div:first-child {
@@ -892,8 +983,8 @@
     grid-template-columns: 1fr;
   }
 
-  .inquiry-divider {
-    display: none;
+  .inquiry-parallax-bg {
+    background-attachment: scroll;
   }
 
   .inquiry-right {
@@ -1007,6 +1098,6 @@
   }
 
   .inquiry-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 90px;
   }
 }

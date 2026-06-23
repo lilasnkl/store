@@ -801,9 +801,7 @@ body { animation: fadeIn 300ms ease-out; }
   padding: 32px 40px;
   overflow: hidden;
   border-radius: 6px;
-  background:
-    linear-gradient(135deg, rgba(0,80,200,0.9) 0%, rgba(1,103,243,0.86) 100%),
-    url('https://images.pexels.com/photos/1117452/pexels-photo-1117452.jpeg?auto=compress&cs=tinysrgb&w=1400') center/cover no-repeat;
+  /* background handled by .inquiry-parallax-bg and .inquiry-overlay */
 }
 .inquiry-left {
   padding-right: 0;
