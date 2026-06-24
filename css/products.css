@@ -290,8 +290,8 @@
   position: absolute;
   top: auto;
   bottom: 12px;
-  left: 12px;
-  right: auto;
+  right: 12px;
+  left: auto;
   width: 32px;
   height: 32px;
   display: flex;
@@ -899,8 +899,8 @@
 .products-page .plp-list.grid-view .plp-card-wish {
   top: auto;
   bottom: 14px;
-  left: 14px;
-  right: auto;
+  right: 14px;
+  left: auto;
   width: 34px;
   height: 34px;
   border-radius: 6px;

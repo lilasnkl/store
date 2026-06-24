@@ -420,8 +420,8 @@
 .plp-card-wish {
   top: auto;
   bottom: 14px;
-  left: 14px;
-  right: auto;
+  right: 14px;
+  left: auto;
   border-radius: 50%;
   box-shadow: 0 8px 20px rgba(17, 24, 39, 0.08);
 }
@@ -438,8 +438,8 @@
 }
 
 .plp-list.grid-view .plp-card-wish {
-  left: 14px;
-  right: auto;
+  right: 14px;
+  left: auto;
   bottom: 14px;
   top: auto;
 }
