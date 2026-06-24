@@ -145,10 +145,17 @@ export function DealCard({ product }: { product: Product }) {
         toast((product.title || 'Item') + ' added to cart', 'success');
       }}
     >
-      <img src={product.thumbnail || ''} alt={product.title || ''} className="deal-card-img" loading="lazy" />
+      <div className="deal-card-img-wrap">
+        {discount > 0 && (
+          <span className="deal-hot-badge">
+            <span className="deal-hot-label">Hot</span>
+            <span className="deal-hot-pct">-{discount}%</span>
+          </span>
+        )}
+        <img src={product.thumbnail || ''} alt={product.title || ''} className="deal-card-img" loading="lazy" />
+      </div>
       <p className="deal-card-name">{product.title || ''}</p>
       <p className="deal-card-price">USD {price}</p>
-      {discount > 0 && <span className="deal-discount-badge">-{discount}%</span>}
     </div>
   );
 }

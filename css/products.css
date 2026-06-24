@@ -288,8 +288,10 @@
 /* Wishlist btn */
 .plp-card-wish {
   position: absolute;
-  top: 12px;
-  right: 12px;
+  top: auto;
+  bottom: 12px;
+  left: 12px;
+  right: auto;
   width: 32px;
   height: 32px;
   display: flex;
@@ -397,7 +399,7 @@
 .plp-card-price {
   font-size: 20px;
   font-weight: 700;
-  color: var(--text-dark);
+  color: var(--red);
   white-space: nowrap;
 }
 .plp-card-old-price {
@@ -833,7 +835,7 @@
   font-size: 18px;
   line-height: 1.25;
   font-weight: 600;
-  color: #1C1C1C;
+  color: var(--red);
 }
 
 .products-page .plp-list.grid-view .plp-card-old-price {
@@ -895,8 +897,10 @@
 }
 
 .products-page .plp-list.grid-view .plp-card-wish {
-  top: 166px;
-  right: 14px;
+  top: auto;
+  bottom: 14px;
+  left: 14px;
+  right: auto;
   width: 34px;
   height: 34px;
   border-radius: 6px;
